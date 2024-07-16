@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>PosterLlama</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -42,6 +42,7 @@
 </head>
 <body>
 
+<!--
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -81,39 +82,28 @@
 
   </div>
 </nav>
-
+-->
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">PosterLlama: Bridging Design Ability of Langauge Model to Content-Aware Layout Generation (ECCV'24)</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              Jaejung Seol<sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://utkarshsinha.com">Seojun Kin</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://jonbarron.info">Jaejun Yoo</a><sup>1,2</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Ulsan National Institute of Science & Technology (UNIST)   ,</span>
+            <span class="author-block"><sup>2</sup>Laboratory of Advanced Imaging Technology <a href="https://sites.google.com/view/jaejunyoo/lait">(LAIT)</a> </span>
+
           </div>
 
           <div class="column has-text-centered">
@@ -137,7 +127,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
+              <!-- Video Link. 
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -146,6 +136,7 @@
                   </span>
                   <span>Video</span>
                 </a>
+                -->
               </span>
               <!-- Code Link. -->
               <span class="link-block">
@@ -157,7 +148,7 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
+              <!-- Dataset Link. 
               <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
@@ -166,6 +157,7 @@
                   </span>
                   <span>Data</span>
                   </a>
+                -->
             </div>
 
           </div>
@@ -258,38 +250,32 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+          Visual layout plays a critical role in graphic design fields
+such as advertising, posters, and web UI design. 
+</p>
+The recent trend to-
+ward content-aware layout generation through generative models has
+shown promise, yet it often overlooks the semantic intricacies of layout
+design by treating it as a simple numerical optimization. To bridge this
+gap, we introduce PosterLlama, a network designed for generating visu-
+ally and textually coherent layouts by reformatting layout elements into
+HTML code and leveraging the rich design knowledge within language
+models. Furthermore, we enhance the robustness of our model with a
+unique depth-based poster augmentation strategy. This ensures our gen-
+erated layouts remain semantically rich but also visually appealing, even
+with limited data. Our extensive evaluations across several benchmarks
+demonstrate that PosterLlama outperforms existing methods in produc-
+ing authentic and content-aware layouts. It supports an unparalleled
+range of conditions, including but not limited to content-aware layout
+generation, element conditional layout generation, and layout comple-
+tion, among others, serving as a highly versatile user manipulation tool
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+    <!--/ Abstract
 
-    <!-- Paper video. -->
+    
+    Paper video. 
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
@@ -299,6 +285,7 @@
         </div>
       </div>
     </div>
+    -->
     <!--/ Paper video. -->
   </div>
 </section>
