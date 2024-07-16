@@ -1,14 +1,14 @@
-# Nerfies
+# PosterLlama
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains website code for the [PosterLlama](https://lait-cvlab.github.io/PosterLlama/).
 
-If you find Nerfies useful for your work please cite:
+Please Cite this, when you find PosterLlama is useful for your work : 
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@article{seol2024posterllama,
+  title    = {PosterLlama: Bridging Design Ability of Langauge Model to Contents-Aware Layout Generation},
+  author   = {Seol, Jaejung and Kim, Seojun and Yoo, Jaejun},
+  journal  = {ECCV},
+  year     = {2024}
 }
 ```
 
