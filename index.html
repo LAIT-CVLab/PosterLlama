@@ -105,7 +105,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/PosterLlama_Overview.png"
+      <img src="./static/images/PosterLLama Overview.gif"
                  class="interpolation-image"
                  alt="Interpolation end reference image."/>
       <h2 class="subtitle has-text-centered">
@@ -157,11 +157,16 @@
           <div class="column is-full-width">
             <h2 class="title is-3">Method</h2>
             <!-- Train Method. -->
-            <h3 class="title is-4">Train Method</h3>
+            <h3 class="title is-4">Overview of PosterLlama</h3>
             <div class="content has-text-justified">
               <p>
-                <span class="dnerf">PosterLlama</span>, a novel model for generating poster layouts that are aware
-                of both visual and textual content, incorporating semantically rich layout elements.
+                <span class="dnerf">PosterLlama</span> overview. 
+                PosterLlama is a vision-language model-based high-quality layout generation model. 
+                It takes a canvas image and a text prompt as input and generates a plausible layout. 
+                Our training process consists of two stages. 
+                The first stage involves multi-modal alignment training on a large VQA dataset. 
+                The second stage focuses on tuning for the layout generation task. 
+                To leverage the language model's knowledge of graphic design, we convert the layout into a code language format.
               </p>
             </div>
             <div class="content has-text-centered">
@@ -171,24 +176,74 @@
             </div>
             <!--/ Train Method. -->
 
-            <!-- Depth-Guided Poster Augmentation. -->
-            <h3 class="title is-4">Depth-Guided Poster Augmentation</h3>
+            <!-- Visual Comparision -->
+            <h3 class="title is-4">Visual Comparision with Baselines</h3>
             <div class="content has-text-justified">
               <p>
-                We introduce a novel poster augmentation. It leverages depth-based augmentation, 
-                closely connected with salient objects, and a top-k similarity selection in a 
-                two-step process, drawing inspiration from recent contents-aware layout 
-                generation works that utilize salient object information as a visual condition.
+                Visual Comparision with three baselines, which are DS-GAN, Layout Prompter, RADM.
+                PosterLlama generate high-quality layout comparing another method. We additionally discussed about the information leckage problem of baselines in our <a href="https://arxiv.org/abs/2404.00995">Paper </a>
+
+
               </p>
             </div>
             <div class="content has-text-centered">
-              <img src="./static/images/PosterLlama_Overview.png"
+              <img src="./static/images/Contents-aware generation.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            </div>
+
+            <br/>
+
+            <!-- Conditional Generation -->
+            <h3 class="title is-4">Element Conditional Layout Generation </h3>
+            <div class="content has-text-justified">
+              <p>
+                Our model is capable of achieving all types of user-conditioned generation defining the condition as text format, which is also a key feature of our method. 
+                We visualize the seven conditions. 
+                The conditions are as follows: Gen-I involves image-conditioned layout generation, 
+                while Gen-IT and Gen-ITS additionally incorporate conditions based on category type and size. 
+                The completion task aims to generate a complete layout using partially placed elements. 
+                The recovery task involves restoring a randomly masked layout, with up to 80% of elements being masked and so on. 
+                As observed, PosterLlama is adept at handling a variety of user constraints while producing high-quality layouts.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <img src="./static/images/Conditional Generation11.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            </div>
+            <div class="content has-text-centered">
+              <img src="./static/images/Conditional Generation2.png"
                  class="interpolation-image"
                  alt="Interpolation end reference image."/>
             </div>
             <br/>
-            <!--/ Depth-Guided Poster Augmentation. -->
-    
+            <!-- Depth-Guided Poster Augmentation. -->
+            <h3 class="title is-4">Depth-Guided Poster Augmentation</h3>
+            <div class="content has-text-justified">
+              <p>
+                (Top) To address the data scarcity issue in PosterLayout generation, 
+                we propose image space augmentation using readily available image generation models. 
+                By utilizing depth maps and refined captions, we ensure high-quality image augmentation that preserves the salient objects in the poster. 
+                Additionally, we employ Top-k similarity sampling to minimize out-of-distribution examples.
+
+                (Bottom) The effect of augmentation technique. Most metrics shows performance improvements 
+                and the reasonable discussion about small degradation in some metrics is presented in our paper. 
+                Additionally, our augmentation can be used for inpainting artifacts free evaluation.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <img src="./static/images/Augmentation_architecture.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            </div>
+
+            <div class="content has-text-centered">
+              <img src="./static/images/Score of augmentation.png"
+                 class="interpolation-image"
+                 alt="Interpolation end reference image."/>
+            </div>
+            <br/>
 
     
           </div>
